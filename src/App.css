@@ -1,0 +1,82 @@
+/* Root theme variables (extend!) */
+:root {
+  --main-bg: linear-gradient(135deg, #f5f7fa 0%, #e0e7fc 100%);
+  --bg: #0d0d0d;       /* For non-gradient sections, if used elsewhere */
+  --text: #191e33;
+  --accent: #764aff;
+  --accent2: #5945bb;
+  --navbar-height: 80px;
+  --card-bg: #fff;
+  --card-bg-dark: #232a49;
+  --shadow: 0 4px 32px #c9e8ff18;
+  /* ...other variables as needed for input, error, etc. */
+}
+[data-theme='dark'] {
+  --main-bg: linear-gradient(135deg, #191e33 0%, #2b2a47 100%);
+  --bg: #0d0d0d;
+  --text: #efeffa;
+  --accent: #35b8ff;
+  --accent2: #2480ea;
+  --card-bg: #1b2137;
+  --card-bg-dark: #25274c;
+  --shadow: 0 4px 28px #1ea3d955;
+}
+
+/* Reset */
+/* *, *::before, *::after { box-sizing: border-box; } */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--main-bg); 
+  color: var(--text);
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.3s ease, color 0.3s ease;
+  overflow-x:visible-;
+}
+
+/* Focus/Accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Section offset for navbar */
+main > section {
+  scroll-margin-top: var(--navbar-height);
+  outline: none;
+}
+
+/* Container utility */
+/* .container {
+  width: 90vw;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* Visually hidden text for screen readers */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Responsive tweaks (extend as needed) */
+@media (max-width: 900px) {
+  .container { max-width: 98vw; }
+  .navbar-container { padding: 0 0.8rem; }
+}
+@media (max-width: 700px) {
+  .container { width: 98vw; max-width: 100vw; }
+}

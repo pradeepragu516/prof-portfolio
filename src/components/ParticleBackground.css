@@ -1,0 +1,28 @@
+/* src/components/ParticleBackground.css */
+
+
+
+
+/* Ensure canvas always covers screen */
+/* canvas {
+  display: block;
+  width: 100vw !important;
+  height: 100vh !important;
+} */
+
+/* Lower particle opacity for mobile for perf */
+@media (max-width: 900px) {
+  .particle-background {
+    opacity: 0.82;
+  }
+}
+
+/* Extra support for dark mode, if needed */
+@media (prefers-color-scheme: dark) {
+  .particle-background {
+    background: transparent;
+  }
+  .particles-canvas {
+    filter: brightness(1.16);
+  }
+}

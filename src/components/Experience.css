@@ -1,0 +1,228 @@
+/* src/components/Experience.css */
+
+:root {
+  --exp-bg: linear-gradient(135deg, #f5f7fa 0%, #e0e7fc 100%);
+  --exp-card: #fff;
+  --exp-card-border: #eaeeff;
+  --exp-text: #191e33;
+  --exp-text-secondary: #384257;
+  --exp-text-muted: #58607f;
+  --exp-accent: #764aff;
+  --exp-accent2: #5945bb;
+  --exp-shadow: 0 4px 20px rgba(169, 200, 255, 0.15);
+}
+
+[data-theme="dark"] {
+  --exp-bg: linear-gradient(135deg, #191e33 0%, #2b2a47 100%);
+  --exp-card: #1b2137;
+  --exp-card-border: #263154;
+  --exp-text: #efeffa;
+  --exp-text-secondary: #cbd5e1;
+  --exp-text-muted: #94a3b8;
+  --exp-accent: #35b8ff;
+  --exp-accent2: #2480ea;
+  --exp-shadow: 0 4px 28px rgba(30, 163, 217, 0.2);
+}
+
+.experience {
+  padding: 2rem 2rem;
+  background: var(--exp-bg);
+  color: var(--exp-text);
+  min-height: 100vh;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--exp-text);
+  font-weight: 700;
+}
+
+.section-title .highlight {
+  color: var(--exp-accent);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--exp-text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+  font-weight: 500;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.experience-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.column-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--exp-text);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-left: 4px solid var(--exp-accent);
+  padding-left: 1rem;
+}
+
+.experience-card {
+  background: var(--exp-card);
+  border: 1.2px solid var(--exp-card-border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--exp-shadow);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(118, 74, 255, 0.2);
+  border-color: var(--exp-accent2);
+}
+
+[data-theme="dark"] .experience-card:hover {
+  box-shadow: 0 10px 30px rgba(53, 184, 255, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--exp-text);
+  margin: 0 0 0.5rem 0;
+}
+
+.card-company,
+.card-institution {
+  color: var(--exp-accent);
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.certificate-btn {
+  background: rgba(118, 74, 255, 0.15);
+  border: 1px solid rgba(118, 74, 255, 0.4);
+  color: var(--exp-accent2);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.certificate-btn:hover {
+  background: var(--exp-accent2);
+  color: #fff;
+  border-color: var(--exp-accent);
+  transform: scale(1.05);
+}
+
+[data-theme="dark"] .certificate-btn {
+  background: rgba(53, 184, 255, 0.15);
+  border: 1px solid rgba(53, 184, 255, 0.4);
+  color: var(--exp-accent);
+}
+
+[data-theme="dark"] .certificate-btn:hover {
+  background: var(--exp-accent2);
+  color: #fff;
+}
+
+.card-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  color: var(--exp-text-muted);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 500;
+}
+
+.card-details {
+  color: var(--exp-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  background: rgba(89, 69, 187, 0.15);
+  border: 1px solid rgba(89, 69, 187, 0.3);
+  color: var(--exp-accent2);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .tag {
+  background: rgba(36, 128, 234, 0.15);
+  border: 1px solid rgba(36, 128, 234, 0.3);
+  color: var(--exp-accent);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .experience {
+    padding: 3rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+  }
+  
+  .certificate-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
