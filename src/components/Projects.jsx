@@ -51,7 +51,7 @@ const projects = [
       'Designed and developed a Task Manager Website that streamlines project and team management with features like task creation, status tracking, real-time collaboration, messaging, file sharing, and role-based dashboards for admins, users, and technicians.',
     tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'REST API'],
     image: task,
-    demo: 'https://classconnect.app',
+    demo: 'https://celebrated-truffle-ef8f25.netlify.app',
     github: 'https://github.com/joyandrew/classconnect',
     date: 'mar 2024',
     featured: true,
