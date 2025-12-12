@@ -10,6 +10,10 @@ import sqlCert from '../assets/sql.png';
 import simplelearn from '../assets/simple.png';
 import linuxCert from '../assets/linux.jpg';
 import zeroday from '../assets/dhruva.jpg';
+import leetcodeIcon from '../assets/leetcode.png';
+import skillrackIcon from '../assets/skillrack.png';
+import codechefIcon from '../assets/codechef.png';
+import hackerrankIcon from '../assets/hackerrank.png';
 
 
 const achievementsData = {
@@ -45,7 +49,7 @@ const achievementsData = {
       platform: 'LeetCode',
       achievement: 'Solved 150+ problems',
       rating: 'Contest Rating: 1,524',
-      icon: '/icons/leetcode.png',
+      icon: leetcodeIcon,
       link: 'https://leetcode.com/u/pradeepm516',
     },
     {
@@ -53,7 +57,7 @@ const achievementsData = {
       platform: 'SkillRack',
       achievement: 'Solved 150+ problems',
       rating: 'Rank: 23915',
-      icon: '/icons/skillrack.png',
+      icon: skillrackIcon,
       link: 'https://www.skillrack.com/faces/resume.xhtml?id=484644&key=92b178a7173ff383073b17c9fae8a14d15dc94de',
     },
     {
@@ -61,7 +65,7 @@ const achievementsData = {
       platform: 'CodeChef',
       achievement: 'Solved 85+ problems',
       rating: '2 Star (1400+)',
-      icon: '/icons/codechef.png',
+      icon: codechefIcon,
       link: 'https://codechef.com/users/pradeepm516',
     },
     {
@@ -69,7 +73,7 @@ const achievementsData = {
       platform: 'HackerRank',
       achievement: 'Java 5★ (Gold)',
       rating: 'C++ 3★, Python 2★, c 3★',
-      icon: '/icons/hackerrank.png',
+      icon: hackerrankIcon,
       link: 'https://hackerrank.com/pradeep_m2023it',
     },
   ],
@@ -79,7 +83,7 @@ const achievementsData = {
       title: 'C++/C Data Structures & Algorithms',
       provider: 'Udemy',
       date: 'Completed',
-      icon: <FaCertificate />,
+      icon: FaCertificate,
       certificate: cppDSA,
     },
     {
@@ -87,7 +91,7 @@ const achievementsData = {
       title: 'The Ultimate Full Stack Web development',
       provider: 'Udemy',
       date: 'Completed',
-      icon: <FaCertificate />,
+      icon: FaCertificate,
       certificate: fullstack,
     },
     {
@@ -95,7 +99,7 @@ const achievementsData = {
       title: 'Java Programming',
       provider: 'Udemy',
       date: 'Completed',
-      icon: <FaCertificate />,
+      icon: FaCertificate,
       certificate: javaCert,
     },
     {
@@ -103,7 +107,7 @@ const achievementsData = {
       title: 'SQL Basics & Intermediate',
       provider: 'HackerRank',
       date: 'Completed',
-      icon: <FaCertificate />,
+      icon: FaCertificate,
       certificate: sqlCert,
     },
      {
@@ -111,7 +115,7 @@ const achievementsData = {
       title: 'Machine Learning Using Python',
       provider: 'SimpleLearn',
       date: 'Completed',
-      icon: <FaCertificate />,
+      icon: FaCertificate,
       certificate: simplelearn,
     },
      {
@@ -119,7 +123,7 @@ const achievementsData = {
       title: 'Introduction to Node.js',
       provider: 'The Linux Foundation',
       date: 'Completed',
-      icon: <FaCertificate />,
+      icon: FaCertificate,
       certificate: linuxCert,
     },
   ],
@@ -252,7 +256,7 @@ const Achievements = () => {
                   whileHover={{ y: -8, scale: 1.02 }}
                 >
                   <div className="platform-icon">
-                    {platform.icon.startsWith('/') ? (
+                    {platform.icon ? (
                       <img src={platform.icon} alt={platform.platform} />
                     ) : (
                       <FaCode size={40} />
@@ -291,7 +295,13 @@ const Achievements = () => {
                   whileHover={{ scale: 1.03 }}
                   onClick={() => setSelectedCert(cert)}
                 >
-                  <div className="cert-icon">{cert.icon}</div>
+                  <div className="cert-icon">
+                    {typeof cert.icon === 'function' ? (
+                      <cert.icon size={32} />
+                    ) : (
+                      cert.icon
+                    )}
+                  </div>
                   <h3>{cert.title}</h3>
                   <p className="provider">{cert.provider}</p>
                   <span className="cert-date">{cert.date}</span>

@@ -55,7 +55,7 @@ const About = () => (
           <div className="resume-desc">
             Download my resume to get detailed information about my skills and experience.
           </div>
-          <a className="resume-btn" href="https://drive.google.com/file/d/1WlrszH1_ZcRXfRFS_MG8Mrryu_LSrtcL/view?usp=drive_link" download target="_blank" rel="noopener noreferrer">
+          <a className="resume-btn" href="https://drive.google.com/file/d/1T-lystCsOUqedz7AxbMrR6MZPI-UDsFN/view?usp=sharing" download target="_blank" rel="noopener noreferrer">
             Download Resume
           </a>
         </div>
