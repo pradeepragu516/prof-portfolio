@@ -6,6 +6,7 @@ import civicfixImg from '../assets/civicfix.png';
 import household from '../assets/household.jpg';
 import alzheimer from '../assets/alzheimer.jpeg';
 import task from '../assets/task.jpg';
+import tokyo from '../assets/tokyo.jpg';
 
 const projects = [
   {
@@ -54,6 +55,18 @@ const projects = [
     demo: 'https://celebrated-truffle-ef8f25.netlify.app',
     github: 'https://github.com/pradeepragu516/taskmanager.git',
     date: 'mar 2024',
+    featured: true,
+  },
+   {
+    id: 5,
+    title: 'Travel Mate',
+    description:
+      'Built a Travel Mate travel planning platform enabling users to explore destinations, create and manage itineraries, track travel expenses, receive recommendations, and organize trips through an intuitive and responsive interface.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    image: tokyo,
+    demo: 'http://127.0.0.1:5500/index.html',
+    github: 'https://github.com/pradeepragu516/travel.git',
+    date: 'august 2024',
     featured: true,
   },
 ];
