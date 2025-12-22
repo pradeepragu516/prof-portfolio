@@ -64,7 +64,7 @@ const projects = [
       'Built a Travel Mate travel planning platform enabling users to explore destinations, create and manage itineraries, track travel expenses, receive recommendations, and organize trips through an intuitive and responsive interface.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     image: tokyo,
-    demo: 'http://127.0.0.1:5500/index.html',
+    demo: 'https://melodic-chaja-f30cce.netlify.app',
     github: 'https://github.com/pradeepragu516/travel.git',
     date: 'august 2024',
     featured: true,
